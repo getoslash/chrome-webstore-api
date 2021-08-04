@@ -3,9 +3,9 @@
 
 [![deno version](https://img.shields.io/badge/deno-^1.12.2-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
+[![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=9F9F9F)](https://deno.land/x/cwa)
 [![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
 [![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=MMRIZtxLgr)](https://codecov.io/gh/getoslash/chrome-webstore-api)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 
 `cwa` is a simple Deno library for uploading & publishing your extensions and
@@ -29,7 +29,7 @@ Once you have them, can you start using the client in your Deno project like
 this —
 
 ```typescript
-import { APIClient } from "https://deno.land/x/cwa@0.0.1/mod.ts";
+import { APIClient } from "https://deno.land/x/cwa@v1.0.0/mod.ts";
 
 const apiClient = new APIClient({
   // Note: These values are representative and don't actually work.
@@ -155,15 +155,32 @@ console.log(accessToken);
 [velociraptor](https://velociraptor.run/docs/installation/). You can view a list
 of the commands using –
 
-    ```
-    vr
-    ```
+  ```bash
+  vr
+  ```
+
 2. To debug this module or to get detailed logs, set the environment variable
 `DEBUG` to `cwa:*`. For example, if you're a *Nix user, use the command —
 
-```bash
-DEBUG=cwa:* vr run test
-```
+  ```bash
+  DEBUG=cwa:* vr run test
+  ```
+
+## Make a release
+
+1. Create a tag.
+
+  ```bash
+  git tag v0.0.0 -s -a -m "Release v0.0.0"
+  ```
+2. Push the tag to Github.
+
+  ```bash
+  git push --tags
+  ```
+3. Find the newly created tag on the [Tags page](https://github.com/getoslash/chrome-webstore-api/tags) and Edit the release to include the changelog.
+4. Publish the release. This triggers the webhook that auto-published the package to https://deno.land/x/cwa 🥳
+
 ## License
 
 The code in this project is released under the [MIT License](LICENSE).
