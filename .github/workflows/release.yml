@@ -48,19 +48,6 @@ jobs:
     - name: Run all tests in random order
       run: vr test --shuffle=${{ steps.generate-seed.outputs.seed }}
 
-  language:
-    name: language
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Check language with Alex
-      uses: brown-ccv/alex-recommends@v1.2.1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        message_id: 'alex'
-        profanity_sureness: 1
-
   coverage:
     needs: [ test ]
     name: coverage
