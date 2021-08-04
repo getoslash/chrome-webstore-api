@@ -6,7 +6,8 @@ Before you begin –
 
 - Install the latest stable version of [Deno](https://deno.land/#installation)
 - Install [velociraptor](https://velociraptor.run/docs/installation/)
-- [VSCode](https://code.visualstudio.com/) is recommended, with a [Deno workspace initialized](https://deno.land/manual@master/vscode_deno#deno-enabling-a-workspace)
+- [VSCode](https://code.visualstudio.com/) is recommended, with a
+  [Deno workspace initialized](https://deno.land/manual@master/vscode_deno#deno-enabling-a-workspace)
 
 ### Installing dependencies
 
