@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Setup Deno
       uses: denoland/setup-deno@v1
       with:
@@ -50,11 +50,14 @@ jobs:
     name: language
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Check language with Alex
       uses: brown-ccv/alex-recommends@v1.2.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        pr_only: true
+        message_id: 'alex'
+        profanity_sureness: 1
 
   coverage:
     needs: [ test ]
@@ -62,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Setup Deno
       uses: denoland/setup-deno@v1
       with:
