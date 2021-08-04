@@ -3,8 +3,8 @@
 
 [![deno version](https://img.shields.io/badge/deno-^1.12.2-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
-[![CI](https://github.com/getoslash/chrome-webstore-api/actions/workflows/ci.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=???)](https://codecov.io/gh/getoslash/chrome-webstore-api)
+[![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
+[![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=MMRIZtxLgr)](https://codecov.io/gh/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 
