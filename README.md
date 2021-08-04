@@ -3,7 +3,7 @@
 
 [![deno version](https://img.shields.io/badge/deno-^1.12.2-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
-[![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=9F9F9F)](https://deno.land/x/cwa)
+[![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=97CA00)](https://deno.land/x/cwa)
 [![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
 [![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=MMRIZtxLgr)](https://codecov.io/gh/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
