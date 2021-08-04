@@ -1,5 +1,10 @@
 # Velociraptor script – @see https://velociraptor.run/docs/introduction/
 scripts:
+  warmup:
+    desc: Warm up Deno cache
+    cmd: deno cache deps.ts dev_deps.ts
+    reload: false
+    lock: lock.json
   lint:
     desc: Lint all code
     cmd: deno lint
