@@ -25,6 +25,8 @@ scripts:
   coverage:
     - desc: Run tests and generate coverage data
       cmd: deno test --shuffle --coverage=cov_profile
+      allow:
+        - env
       reload: false
       cachedOnly: true
       lock: lock.json
