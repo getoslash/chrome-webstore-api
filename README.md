@@ -1,7 +1,7 @@
 <!-- deno-fmt-ignore-file -->
 # Chrome Web Store API Client
 
-[![deno version](https://img.shields.io/badge/deno-^1.12.2-lightgrey?logo=deno)](https://github.com/denoland/deno)
+[![deno version](https://img.shields.io/badge/deno-^1.13.0-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
 [![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=97CA00)](https://deno.land/x/cwa)
 [![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
@@ -71,7 +71,7 @@ Upload a new version of an existing item to the Web Store. Use this when you're
 uploading a newer version of an existing extension or theme.
 
 ```typescript
-import { readableStreamFromReader } from "https://deno.land/std@0.100.0/io/mod.ts";
+import { readableStreamFromReader } from "https://deno.land/std@0.104.0/io/mod.ts";
 
 const filePath = "/path/to/your/existing/extension.zip";
 const fileReader = await Deno.open(filePath, { read: true });
