@@ -3,4 +3,4 @@ export type { Stub } from "https://deno.land/x/mock@v0.10.0/mod.ts";
 export {
   assertEquals,
   assertThrowsAsync,
-} from "https://deno.land/std@0.106.0/testing/asserts.ts";
+} from "https://deno.land/std@0.107.0/testing/asserts.ts";
