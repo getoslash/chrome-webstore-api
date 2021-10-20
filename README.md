@@ -1,7 +1,7 @@
 <!-- deno-fmt-ignore-file -->
 # Chrome Web Store API Client
 
-[![deno version](https://img.shields.io/badge/deno-^1.14.0-lightgrey?logo=deno)](https://github.com/denoland/deno)
+[![deno version](https://img.shields.io/badge/deno-^1.15.2-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
 [![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=97CA00)](https://deno.land/x/cwa)
 [![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
