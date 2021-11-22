@@ -118,7 +118,7 @@ export class APIClient {
       headers: this.buildHeaders(await token),
       body: readStream,
     });
-    debug("finished uploading existing package to chrome store");
+    debug("got uploading response from chrome store");
 
     const response = await request.json() as GoogleAPIWebStoreItem;
     debug("upload response %j", response);
