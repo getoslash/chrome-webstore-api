@@ -1,4 +1,9 @@
-import { assertEquals, assertThrowsAsync, stub } from "../dev_deps.ts";
+import {
+  assertEquals,
+  assertThrowsAsync,
+  resolvesNext,
+  stub,
+} from "../dev_deps.ts";
 import {
   fixtures,
   getClient,
@@ -12,23 +17,23 @@ Deno.test({
     "fetchToken() > should POST the payload and return the 'access_token' field.",
   fn: async () => {
     const client = getClient();
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "access_token": "xyz",
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "access_token": "xyz",
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     const accessToken = await client.fetchToken();
     assertEquals(
@@ -53,24 +58,24 @@ Deno.test({
 Deno.test({
   name: "uploadNew() > should POST the payload.",
   fn: async () => {
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "ok": true,
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const client = getClient();
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "ok": true,
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     const stream = new ReadableStream();
     await client.uploadNew(stream, getToken());
@@ -106,24 +111,24 @@ Deno.test({
 Deno.test({
   name: "uploadExisting() > should PUT the payload.",
   fn: async () => {
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "ok": true,
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const client = getClient();
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "ok": true,
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     const stream = new ReadableStream();
     await client.uploadExisting(stream, getToken());
@@ -159,24 +164,24 @@ Deno.test({
 Deno.test({
   name: "publish() > should POST and default to 'default' target.",
   fn: async () => {
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "ok": true,
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const client = getClient();
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "ok": true,
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     await client.publish(undefined, getToken());
     assertEquals(
@@ -196,24 +201,24 @@ Deno.test({
   name:
     "publish() > should POST with trusted testers as target if called with that target.",
   fn: async () => {
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "ok": true,
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const client = getClient();
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "ok": true,
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     await client.publish("trustedUsers", getToken());
     assertEquals(
@@ -232,24 +237,24 @@ Deno.test({
 Deno.test({
   name: "checkUploadStatus() > should GET the payload.",
   fn: async () => {
+    const mockResponses = [
+      new Response(
+        new Blob([
+          JSON.stringify(
+            {
+              "ok": true,
+            },
+            null,
+            2,
+          ),
+        ], { type: "application/json" }),
+      ),
+    ];
     const client = getClient();
     const fetchStub: Stub<typeof globalThis> = stub(
       globalThis,
       "fetch",
-      () =>
-        Promise.resolve(
-          new Response(
-            new Blob([
-              JSON.stringify(
-                {
-                  "ok": true,
-                },
-                null,
-                2,
-              ),
-            ], { type: "application/json" }),
-          ),
-        ),
+      resolvesNext(mockResponses),
     );
     await client.checkUploadStatus(getToken());
     assertEquals(
