@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=MMRIZtxLgr)](https://codecov.io/gh/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 
-`cwa` is a simple Deno library for uploading & publishing your extensions and
+`cwa` is a easy-to-use Deno library for uploading & publishing your extensions and
 themes to the
 [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
 
