@@ -1,6 +1,6 @@
 import {
   assertEquals,
-  assertThrowsAsync,
+  assertRejects,
   resolvesNext,
   stub,
 } from "../dev_deps.ts";
@@ -98,7 +98,7 @@ Deno.test({
     const client = getClient();
     // @ts-expect-error We're specifically making this `null` to see if it will throw.
     const stream: ReadableStream = null;
-    assertThrowsAsync(
+    assertRejects(
       async () => {
         await client.uploadNew(stream, getToken());
       },
@@ -151,7 +151,7 @@ Deno.test({
     const client = getClient();
     // @ts-expect-error We're specifically making this `null` to see if it will throw.
     const stream: ReadableStream = null;
-    assertThrowsAsync(
+    assertRejects(
       async () => {
         await client.uploadExisting(stream, getToken());
       },
