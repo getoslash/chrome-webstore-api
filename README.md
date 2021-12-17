@@ -1,14 +1,14 @@
 <!-- deno-fmt-ignore-file -->
 # Chrome Web Store API Client
 
-[![deno version](https://img.shields.io/badge/deno-^1.16.3-lightgrey?logo=deno)](https://github.com/denoland/deno)
+[![deno version](https://img.shields.io/badge/deno-^1.17.0-lightgrey?logo=deno)](https://github.com/denoland/deno)
 [![GitHub Release](https://img.shields.io/github/release/getoslash/chrome-webstore-api.svg)](https://github.com/getoslash/chrome-webstore-api/releases)
 [![Deno.land](https://img.shields.io/badge/Published%20on%20deno.land-lightgrey?logo=deno&logoColor=FFFFFF&color=97CA00)](https://deno.land/x/cwa)
 [![Release](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml/badge.svg)](https://github.com/getoslash/chrome-webstore-api/actions/workflows/release.yml)
 [![codecov](https://codecov.io/gh/getoslash/chrome-webstore-api/branch/main/graph/badge.svg?token=MMRIZtxLgr)](https://codecov.io/gh/getoslash/chrome-webstore-api)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/getoslash/chrome-webstore-api)
 
-`cwa` is a simple Deno library for uploading & publishing your extensions and
+`cwa` is a easy-to-use Deno library for uploading & publishing your extensions and
 themes to the
 [Chrome Web Store](https://chrome.google.com/webstore/category/extensions).
 
